@@ -14,7 +14,7 @@ func TestDenomString(t *testing.T) {
 	}{
 		{
 			denom:       types.DenomElysium,
-			expectedStr: "base_denom: uxprt\nsymbol_denom: XPRT\nexponent: 6\n",
+			expectedStr: "base_denom: ufury\nsymbol_denom: FURY\nexponent: 6\n",
 		},
 		{
 			denom:       types.DenomAtom,
@@ -67,11 +67,11 @@ func TestDenomListString(t *testing.T) {
 	}{
 		{
 			denomList:   types.DenomList{types.DenomElysium},
-			expectedStr: "base_denom: uxprt\nsymbol_denom: XPRT\nexponent: 6",
+			expectedStr: "base_denom: ufury\nsymbol_denom: FURY\nexponent: 6",
 		},
 		{
 			denomList:   types.DenomList{types.DenomElysium, types.DenomAtom},
-			expectedStr: "base_denom: uxprt\nsymbol_denom: XPRT\nexponent: 6\n\nbase_denom: ibc/4A17832B26BF318D052563EFFE677C1DE11DF8CE104F00204860F3E3439818B2\nsymbol_denom: ATOM\nexponent: 6",
+			expectedStr: "base_denom: ufury\nsymbol_denom: FURY\nexponent: 6\n\nbase_denom: ibc/4A17832B26BF318D052563EFFE677C1DE11DF8CE104F00204860F3E3439818B2\nsymbol_denom: ATOM\nexponent: 6",
 		},
 	}
 

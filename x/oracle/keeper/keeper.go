@@ -118,7 +118,7 @@ func (k Keeper) ClearExchangeRates(ctx sdk.Context) {
 	}
 }
 
-// IterateExchangeRates iterates over XPRT rates in the store.
+// IterateExchangeRates iterates over FURY rates in the store.
 func (k Keeper) IterateExchangeRates(ctx sdk.Context, handler func(string, sdk.Dec) bool) {
 	store := ctx.KVStore(k.storeKey)
 

@@ -5,8 +5,8 @@ import (
 )
 
 const (
-	ElysiumDenom    string = "uxprt"
-	ElysiumSymbol   string = "XPRT"
+	ElysiumDenom    string = "ufury"
+	ElysiumSymbol   string = "FURY"
 	ElysiumExponent        = uint32(6)
 	BlocksPerMinute            = uint64(10)
 	BlocksPerHour              = BlocksPerMinute * 60
