@@ -1,4 +1,4 @@
-module github.com/persistenceOne/persistence-sdk/v2
+module github.com/merlin-network/elysium-sdk/v2
 
 go 1.19
 
