@@ -2,7 +2,7 @@ package simapp
 
 import (
 	"github.com/cosmos/cosmos-sdk/std"
-	"github.com/persistenceOne/persistence-sdk/v2/simapp/params"
+	"github.com/merlin-network/elysium-sdk/v2/simapp/params"
 )
 
 // MakeTestEncodingConfig creates an EncodingConfig for testing. This function

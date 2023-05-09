@@ -28,8 +28,8 @@ import (
 	"github.com/tendermint/tendermint/libs/log"
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/persistenceOne/persistence-sdk/v2/simapp"
-	"github.com/persistenceOne/persistence-sdk/v2/simapp/params"
+	"github.com/merlin-network/elysium-sdk/v2/simapp"
+	"github.com/merlin-network/elysium-sdk/v2/simapp/params"
 )
 
 // NewRootCmd creates a new root command for simd. It is called once in the

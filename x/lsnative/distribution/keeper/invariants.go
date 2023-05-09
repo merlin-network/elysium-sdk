@@ -5,7 +5,7 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkstaking "github.com/cosmos/cosmos-sdk/x/staking/types"
-	"github.com/persistenceOne/persistence-sdk/v2/x/lsnative/distribution/types"
+	"github.com/merlin-network/elysium-sdk/v2/x/lsnative/distribution/types"
 )
 
 // register all distribution invariants

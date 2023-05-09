@@ -31,11 +31,11 @@ import (
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/persistenceOne/persistence-sdk/v2/x/epochs"
-	"github.com/persistenceOne/persistence-sdk/v2/x/halving"
-	"github.com/persistenceOne/persistence-sdk/v2/x/ibchooker"
-	"github.com/persistenceOne/persistence-sdk/v2/x/interchainquery"
-	"github.com/persistenceOne/persistence-sdk/v2/x/oracle"
+	"github.com/merlin-network/elysium-sdk/v2/x/epochs"
+	"github.com/merlin-network/elysium-sdk/v2/x/halving"
+	"github.com/merlin-network/elysium-sdk/v2/x/ibchooker"
+	"github.com/merlin-network/elysium-sdk/v2/x/interchainquery"
+	"github.com/merlin-network/elysium-sdk/v2/x/oracle"
 )
 
 func TestSimAppExportAndBlockedAddrs(t *testing.T) {

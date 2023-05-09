@@ -5,8 +5,8 @@ import (
 )
 
 const (
-	PersistenceDenom    string = "uxprt"
-	PersistenceSymbol   string = "XPRT"
+	PersistenceDenom    string = "ufury"
+	PersistenceSymbol   string = "FURY"
 	PersistenceExponent        = uint32(6)
 	BlocksPerMinute            = uint64(10)
 	BlocksPerHour              = BlocksPerMinute * 60

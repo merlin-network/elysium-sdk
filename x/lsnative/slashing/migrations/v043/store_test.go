@@ -10,9 +10,9 @@ import (
 	"github.com/cosmos/cosmos-sdk/testutil/testdata"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	v040slashing "github.com/persistenceOne/persistence-sdk/v2/x/lsnative/slashing/migrations/v042"
-	v043slashing "github.com/persistenceOne/persistence-sdk/v2/x/lsnative/slashing/migrations/v043"
-	"github.com/persistenceOne/persistence-sdk/v2/x/lsnative/slashing/types"
+	v040slashing "github.com/merlin-network/elysium-sdk/v2/x/lsnative/slashing/migrations/v042"
+	v043slashing "github.com/merlin-network/elysium-sdk/v2/x/lsnative/slashing/migrations/v043"
+	"github.com/merlin-network/elysium-sdk/v2/x/lsnative/slashing/types"
 )
 
 func TestStoreMigration(t *testing.T) {

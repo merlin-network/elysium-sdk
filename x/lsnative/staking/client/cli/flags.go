@@ -3,7 +3,7 @@ package cli
 import (
 	flag "github.com/spf13/pflag"
 
-	"github.com/persistenceOne/persistence-sdk/v2/x/lsnative/staking/types"
+	"github.com/merlin-network/elysium-sdk/v2/x/lsnative/staking/types"
 )
 
 const (

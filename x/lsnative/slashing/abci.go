@@ -7,8 +7,8 @@ import (
 
 	"github.com/cosmos/cosmos-sdk/telemetry"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/persistenceOne/persistence-sdk/v2/x/lsnative/slashing/keeper"
-	"github.com/persistenceOne/persistence-sdk/v2/x/lsnative/slashing/types"
+	"github.com/merlin-network/elysium-sdk/v2/x/lsnative/slashing/keeper"
+	"github.com/merlin-network/elysium-sdk/v2/x/lsnative/slashing/types"
 )
 
 // BeginBlocker check for infraction evidence or downtime of validators

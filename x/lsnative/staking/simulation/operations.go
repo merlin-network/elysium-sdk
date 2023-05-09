@@ -11,8 +11,8 @@ import (
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
 	"github.com/cosmos/cosmos-sdk/x/simulation"
 	sdkstaking "github.com/cosmos/cosmos-sdk/x/staking/types"
-	"github.com/persistenceOne/persistence-sdk/v2/x/lsnative/staking/keeper"
-	"github.com/persistenceOne/persistence-sdk/v2/x/lsnative/staking/types"
+	"github.com/merlin-network/elysium-sdk/v2/x/lsnative/staking/keeper"
+	"github.com/merlin-network/elysium-sdk/v2/x/lsnative/staking/types"
 )
 
 const (

@@ -7,8 +7,8 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
 	"github.com/cosmos/cosmos-sdk/x/simulation"
-	"github.com/persistenceOne/persistence-sdk/v2/x/lsnative/distribution/keeper"
-	"github.com/persistenceOne/persistence-sdk/v2/x/lsnative/distribution/types"
+	"github.com/merlin-network/elysium-sdk/v2/x/lsnative/distribution/keeper"
+	"github.com/merlin-network/elysium-sdk/v2/x/lsnative/distribution/types"
 )
 
 // OpWeightSubmitCommunitySpendProposal app params key for community spend proposal

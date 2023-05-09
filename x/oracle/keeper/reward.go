@@ -5,11 +5,11 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/persistenceOne/persistence-sdk/v2/x/oracle/types"
+	"github.com/merlin-network/elysium-sdk/v2/x/oracle/types"
 )
 
-// prependXPRTIfUnique pushs `uxprt` denom to the front of the list, if it is not yet included.
-func prependXPRTIfUnique(voteTargets []string) []string {
+// prependFURYIfUnique pushs `ufury` denom to the front of the list, if it is not yet included.
+func prependFURYIfUnique(voteTargets []string) []string {
 	if contains(types.PersistenceDenom, voteTargets) {
 		return voteTargets
 	}
@@ -47,7 +47,7 @@ func (k Keeper) RewardBallotWinners(
 
 	var periodRewards sdk.DecCoins
 
-	rewardDenoms := prependXPRTIfUnique(voteTargets)
+	rewardDenoms := prependFURYIfUnique(voteTargets)
 	for _, denom := range rewardDenoms {
 		rewardPool := k.GetRewardPool(ctx, denom)
 

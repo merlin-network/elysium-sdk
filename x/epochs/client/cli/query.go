@@ -6,7 +6,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/persistenceOne/persistence-sdk/v2/x/epochs/types"
+	"github.com/merlin-network/elysium-sdk/v2/x/epochs/types"
 
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/client/flags"

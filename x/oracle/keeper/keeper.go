@@ -13,7 +13,7 @@ import (
 	gogotypes "github.com/gogo/protobuf/types"
 	"github.com/tendermint/tendermint/libs/log"
 
-	"github.com/persistenceOne/persistence-sdk/v2/x/oracle/types"
+	"github.com/merlin-network/elysium-sdk/v2/x/oracle/types"
 )
 
 // Keeper of the oracle store
@@ -118,7 +118,7 @@ func (k Keeper) ClearExchangeRates(ctx sdk.Context) {
 	}
 }
 
-// IterateExchangeRates iterates over XPRT rates in the store.
+// IterateExchangeRates iterates over FURY rates in the store.
 func (k Keeper) IterateExchangeRates(ctx sdk.Context, handler func(string, sdk.Dec) bool) {
 	store := ctx.KVStore(k.storeKey)
 

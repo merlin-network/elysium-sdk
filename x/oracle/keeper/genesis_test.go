@@ -2,9 +2,9 @@ package keeper_test
 
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	simapp "github.com/persistenceOne/persistence-sdk/v2/simapp"
-	"github.com/persistenceOne/persistence-sdk/v2/x/oracle"
-	"github.com/persistenceOne/persistence-sdk/v2/x/oracle/types"
+	simapp "github.com/merlin-network/elysium-sdk/v2/simapp"
+	"github.com/merlin-network/elysium-sdk/v2/x/oracle"
+	"github.com/merlin-network/elysium-sdk/v2/x/oracle/types"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 )
 

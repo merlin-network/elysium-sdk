@@ -4,7 +4,7 @@ import (
 	"os"
 
 	"github.com/cosmos/cosmos-sdk/codec"
-	"github.com/persistenceOne/persistence-sdk/v2/x/lsnative/distribution/types"
+	"github.com/merlin-network/elysium-sdk/v2/x/lsnative/distribution/types"
 )
 
 // ParseCommunityPoolSpendProposalWithDeposit reads and parses a CommunityPoolSpendProposalWithDeposit from a file.

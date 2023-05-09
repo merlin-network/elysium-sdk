@@ -37,7 +37,7 @@ import (
 	tmtypes "github.com/tendermint/tendermint/types"
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/persistenceOne/persistence-sdk/v2/simapp/params"
+	"github.com/merlin-network/elysium-sdk/v2/simapp/params"
 )
 
 // DefaultConsensusParams defines the default Tendermint consensus params used in

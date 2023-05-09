@@ -4,8 +4,8 @@ import (
 	"github.com/gogo/protobuf/proto"
 	"github.com/stretchr/testify/suite"
 
-	"github.com/persistenceOne/persistence-sdk/v2/x/epochs/client/cli"
-	"github.com/persistenceOne/persistence-sdk/v2/x/epochs/types"
+	"github.com/merlin-network/elysium-sdk/v2/x/epochs/client/cli"
+	"github.com/merlin-network/elysium-sdk/v2/x/epochs/types"
 
 	clitestutil "github.com/cosmos/cosmos-sdk/testutil/cli"
 	"github.com/cosmos/cosmos-sdk/testutil/network"

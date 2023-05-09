@@ -16,11 +16,11 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/module"
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
-	"github.com/persistenceOne/persistence-sdk/v2/x/lsnative/distribution/client/cli"
-	"github.com/persistenceOne/persistence-sdk/v2/x/lsnative/distribution/keeper"
-	"github.com/persistenceOne/persistence-sdk/v2/x/lsnative/distribution/simulation"
-	"github.com/persistenceOne/persistence-sdk/v2/x/lsnative/distribution/types"
-	stakingkeeper "github.com/persistenceOne/persistence-sdk/v2/x/lsnative/staking/keeper"
+	"github.com/merlin-network/elysium-sdk/v2/x/lsnative/distribution/client/cli"
+	"github.com/merlin-network/elysium-sdk/v2/x/lsnative/distribution/keeper"
+	"github.com/merlin-network/elysium-sdk/v2/x/lsnative/distribution/simulation"
+	"github.com/merlin-network/elysium-sdk/v2/x/lsnative/distribution/types"
+	stakingkeeper "github.com/merlin-network/elysium-sdk/v2/x/lsnative/staking/keeper"
 )
 
 var (

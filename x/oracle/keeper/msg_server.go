@@ -7,7 +7,7 @@ import (
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 
-	"github.com/persistenceOne/persistence-sdk/v2/x/oracle/types"
+	"github.com/merlin-network/elysium-sdk/v2/x/oracle/types"
 )
 
 type msgServer struct {

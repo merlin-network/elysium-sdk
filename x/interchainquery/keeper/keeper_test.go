@@ -8,9 +8,9 @@ import (
 	ibctesting "github.com/cosmos/ibc-go/v6/testing"
 	"github.com/stretchr/testify/suite"
 
-	"github.com/persistenceOne/persistence-sdk/v2/simapp"
-	"github.com/persistenceOne/persistence-sdk/v2/x/interchainquery/keeper"
-	icqtypes "github.com/persistenceOne/persistence-sdk/v2/x/interchainquery/types"
+	"github.com/merlin-network/elysium-sdk/v2/simapp"
+	"github.com/merlin-network/elysium-sdk/v2/x/interchainquery/keeper"
+	icqtypes "github.com/merlin-network/elysium-sdk/v2/x/interchainquery/types"
 )
 
 const TestOwnerAddress = "cosmos17dtl0mjt3t77kpuhg2edqzjpszulwhgzuj9ljs"

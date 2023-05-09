@@ -8,7 +8,7 @@ import (
 
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
 	"github.com/cosmos/cosmos-sdk/x/simulation"
-	"github.com/persistenceOne/persistence-sdk/v2/x/lsnative/slashing/types"
+	"github.com/merlin-network/elysium-sdk/v2/x/lsnative/slashing/types"
 )
 
 const (

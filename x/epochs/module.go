@@ -28,9 +28,9 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/module"
 
-	"github.com/persistenceOne/persistence-sdk/v2/x/epochs/client/cli"
-	"github.com/persistenceOne/persistence-sdk/v2/x/epochs/keeper"
-	"github.com/persistenceOne/persistence-sdk/v2/x/epochs/types"
+	"github.com/merlin-network/elysium-sdk/v2/x/epochs/client/cli"
+	"github.com/merlin-network/elysium-sdk/v2/x/epochs/keeper"
+	"github.com/merlin-network/elysium-sdk/v2/x/epochs/types"
 )
 
 var (

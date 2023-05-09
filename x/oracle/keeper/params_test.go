@@ -2,7 +2,7 @@ package keeper_test
 
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/persistenceOne/persistence-sdk/v2/x/oracle/types"
+	"github.com/merlin-network/elysium-sdk/v2/x/oracle/types"
 )
 
 func (s *KeeperTestSuite) TestVoteThreshold() {

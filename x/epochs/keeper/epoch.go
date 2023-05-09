@@ -6,7 +6,7 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	"github.com/persistenceOne/persistence-sdk/v2/x/epochs/types"
+	"github.com/merlin-network/elysium-sdk/v2/x/epochs/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )

@@ -9,8 +9,8 @@ import (
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/simapp"
 
-	v046 "github.com/persistenceOne/persistence-sdk/v2/x/lsnative/staking/migrations/v046"
-	"github.com/persistenceOne/persistence-sdk/v2/x/lsnative/staking/types"
+	v046 "github.com/merlin-network/elysium-sdk/v2/x/lsnative/staking/migrations/v046"
+	"github.com/merlin-network/elysium-sdk/v2/x/lsnative/staking/types"
 )
 
 func TestMigrateJSON(t *testing.T) {

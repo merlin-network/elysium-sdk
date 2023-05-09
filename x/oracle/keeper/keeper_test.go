@@ -13,10 +13,10 @@ import (
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 	tmtime "github.com/tendermint/tendermint/types/time"
 
-	persistenceapp "github.com/persistenceOne/persistence-sdk/v2/simapp"
-	"github.com/persistenceOne/persistence-sdk/v2/x/oracle/keeper"
-	"github.com/persistenceOne/persistence-sdk/v2/x/oracle/testutil"
-	"github.com/persistenceOne/persistence-sdk/v2/x/oracle/types"
+	persistenceapp "github.com/merlin-network/elysium-sdk/v2/simapp"
+	"github.com/merlin-network/elysium-sdk/v2/x/oracle/keeper"
+	"github.com/merlin-network/elysium-sdk/v2/x/oracle/testutil"
+	"github.com/merlin-network/elysium-sdk/v2/x/oracle/types"
 )
 
 type KeeperTestSuite struct {

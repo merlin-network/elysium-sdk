@@ -7,7 +7,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/kv"
-	"github.com/persistenceOne/persistence-sdk/v2/x/lsnative/distribution/types"
+	"github.com/merlin-network/elysium-sdk/v2/x/lsnative/distribution/types"
 )
 
 // NewDecodeStore returns a decoder function closure that unmarshals the KVPair's

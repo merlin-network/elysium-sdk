@@ -5,7 +5,7 @@ import (
 
 	"github.com/cosmos/cosmos-sdk/client"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/persistenceOne/persistence-sdk/v2/x/lsnative/genutil/types"
+	"github.com/merlin-network/elysium-sdk/v2/x/lsnative/genutil/types"
 )
 
 // InitGenesis - initialize accounts and deliver genesis transactions

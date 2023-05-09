@@ -4,7 +4,7 @@ import (
 	"context"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/persistenceOne/persistence-sdk/v2/x/lsnative/slashing/types"
+	"github.com/merlin-network/elysium-sdk/v2/x/lsnative/slashing/types"
 )
 
 type msgServer struct {

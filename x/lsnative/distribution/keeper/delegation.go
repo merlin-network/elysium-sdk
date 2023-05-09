@@ -6,7 +6,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkdistr "github.com/cosmos/cosmos-sdk/x/distribution/types"
 	sdkstaking "github.com/cosmos/cosmos-sdk/x/staking/types"
-	"github.com/persistenceOne/persistence-sdk/v2/x/lsnative/distribution/types"
+	"github.com/merlin-network/elysium-sdk/v2/x/lsnative/distribution/types"
 )
 
 // initialize starting info for a new delegation

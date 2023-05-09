@@ -3,7 +3,7 @@ package keeper
 import (
 	"sort"
 
-	"github.com/persistenceOne/persistence-sdk/v2/x/oracle/types"
+	"github.com/merlin-network/elysium-sdk/v2/x/oracle/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )
