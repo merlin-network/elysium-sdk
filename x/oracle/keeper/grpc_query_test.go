@@ -13,9 +13,9 @@ func (s *KeeperTestSuite) TestQueryExchangeRate() {
 	s.Require().Nil(resp)
 
 	// Set exchange rate for FURY.
-	s.app.OracleKeeper.SetExchangeRate(s.ctx, types.PersistenceSymbol, sdk.OneDec())
+	s.app.OracleKeeper.SetExchangeRate(s.ctx, types.ElysiumSymbol, sdk.OneDec())
 
-	resp, err = s.queryClient.ExchangeRate(s.ctx.Context(), &types.QueryExchangeRateRequest{Denom: types.PersistenceSymbol})
+	resp, err = s.queryClient.ExchangeRate(s.ctx.Context(), &types.QueryExchangeRateRequest{Denom: types.ElysiumSymbol})
 	s.Require().NoError(err)
 	s.Require().Equal(resp.ExchangeRate, sdk.OneDec().String())
 }
@@ -27,7 +27,7 @@ func (s *KeeperTestSuite) TestQueryAllExchangeRate() {
 	s.Require().Nil(resp.ExchangeRates)
 
 	// Set exchange rate for FURY.
-	s.app.OracleKeeper.SetExchangeRate(s.ctx, types.PersistenceSymbol, sdk.OneDec())
+	s.app.OracleKeeper.SetExchangeRate(s.ctx, types.ElysiumSymbol, sdk.OneDec())
 	// Set exchange rate for ATOM.
 	s.app.OracleKeeper.SetExchangeRate(s.ctx, types.AtomSymbol, sdk.OneDec())
 

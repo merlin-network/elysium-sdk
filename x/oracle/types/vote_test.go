@@ -28,7 +28,7 @@ func TestAggregateExchangeRatePrevoteString(t *testing.T) {
 func TestAggregateExchangeRateVoteString(t *testing.T) {
 	aggregateExchangeRatePreVote := NewAggregateExchangeRateVote(
 		ExchangeRateTuples{
-			NewExchangeRateTuple(PersistenceDenom, sdk.OneDec()),
+			NewExchangeRateTuple(ElysiumDenom, sdk.OneDec()),
 		},
 		sdk.ValAddress(valAddr),
 	)
@@ -38,7 +38,7 @@ func TestAggregateExchangeRateVoteString(t *testing.T) {
 }
 
 func TestExchangeRateTuplesString(t *testing.T) {
-	exchangeRateTuple := NewExchangeRateTuple(PersistenceDenom, sdk.OneDec())
+	exchangeRateTuple := NewExchangeRateTuple(ElysiumDenom, sdk.OneDec())
 	require.Equal(t, exchangeRateTuple.String(), "denom: ufury\nexchange_rate: \"1.000000000000000000\"\n")
 
 	exchangeRateTuples := ExchangeRateTuples{

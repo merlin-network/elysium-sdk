@@ -12,9 +12,9 @@ import (
 )
 
 var (
-	DenomPersistence = Denom{
-		BaseDenom:   PersistenceDenom,
-		SymbolDenom: PersistenceSymbol,
+	DenomElysium = Denom{
+		BaseDenom:   ElysiumDenom,
+		SymbolDenom: ElysiumSymbol,
 		Exponent:    6,
 	}
 

@@ -18,7 +18,7 @@ func (s *KeeperTestSuite) TestRewardBallotWinners() {
 	}
 
 	// Prepare reward pool
-	givingAmt := sdk.NewCoins(sdk.NewInt64Coin(types.PersistenceDenom, 30000000))
+	givingAmt := sdk.NewCoins(sdk.NewInt64Coin(types.ElysiumDenom, 30000000))
 	err := s.app.BankKeeper.MintCoins(s.ctx, minttypes.ModuleName, givingAmt)
 	s.Require().NoError(err)
 	err = s.app.BankKeeper.SendCoinsFromModuleToModule(s.ctx, minttypes.ModuleName, types.ModuleName, givingAmt)
@@ -40,8 +40,8 @@ func (s *KeeperTestSuite) TestRewardBallotWinners() {
 
 	outstandingRewardsDec := s.app.DistrKeeper.GetValidatorOutstandingRewardsCoins(s.ctx, valAddr)
 	outstandingRewards, _ := outstandingRewardsDec.TruncateDecimal()
-	s.Require().Equal(sdk.NewDecFromInt(givingAmt.AmountOf(types.PersistenceDenom)).QuoInt64(votePeriodsPerWindow).QuoInt64(3).TruncateInt(),
-		outstandingRewards.AmountOf(types.PersistenceDenom))
+	s.Require().Equal(sdk.NewDecFromInt(givingAmt.AmountOf(types.ElysiumDenom)).QuoInt64(votePeriodsPerWindow).QuoInt64(3).TruncateInt(),
+		outstandingRewards.AmountOf(types.ElysiumDenom))
 }
 
 func (s *KeeperTestSuite) TestRewardBallotWinnersZeroPower() {

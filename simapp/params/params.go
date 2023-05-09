@@ -8,6 +8,6 @@ const (
 	// BondDenom defines the native staking token denomination.
 	BondDenom = "fury"
 
-	// DisplayDenom defines the name, symbol, and display value of the persistence token.
-	DisplayDenom = "persistence"
+	// DisplayDenom defines the name, symbol, and display value of the elysium token.
+	DisplayDenom = "elysium"
 )

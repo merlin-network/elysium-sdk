@@ -10,7 +10,7 @@ import (
 
 var (
 	atomExchangeRate        = sdk.MustNewDecFromStr("0.0000001")
-	persistenceExchangeRate = sdk.MustNewDecFromStr("0.0000005")
+	elysiumExchangeRate = sdk.MustNewDecFromStr("0.0000005")
 )
 
 func (s *KeeperTestSuite) TestOracleExportGenesis() {
@@ -48,8 +48,8 @@ func (s *KeeperTestSuite) TestOracleInitGenesis() {
 			RewardDistributionWindow: 10000,
 			AcceptList: types.DenomList{
 				types.Denom{
-					BaseDenom:   types.PersistenceDenom,
-					SymbolDenom: types.PersistenceSymbol,
+					BaseDenom:   types.ElysiumDenom,
+					SymbolDenom: types.ElysiumSymbol,
 					Exponent:    8,
 				},
 				types.Denom{
@@ -68,8 +68,8 @@ func (s *KeeperTestSuite) TestOracleInitGenesis() {
 				ExchangeRate: atomExchangeRate,
 			},
 			types.ExchangeRateTuple{
-				Denom:        types.PersistenceSymbol,
-				ExchangeRate: persistenceExchangeRate,
+				Denom:        types.ElysiumSymbol,
+				ExchangeRate: elysiumExchangeRate,
 			},
 		},
 		MissCounters: []types.MissCounter{
@@ -102,8 +102,8 @@ func (s *KeeperTestSuite) TestOracleInitGenesis() {
 						ExchangeRate: atomExchangeRate,
 					},
 					types.ExchangeRateTuple{
-						Denom:        types.PersistenceSymbol,
-						ExchangeRate: persistenceExchangeRate,
+						Denom:        types.ElysiumSymbol,
+						ExchangeRate: elysiumExchangeRate,
 					},
 				},
 				Voter: valAddr.String(),
@@ -115,8 +115,8 @@ func (s *KeeperTestSuite) TestOracleInitGenesis() {
 						ExchangeRate: atomExchangeRate,
 					},
 					types.ExchangeRateTuple{
-						Denom:        types.PersistenceSymbol,
-						ExchangeRate: persistenceExchangeRate,
+						Denom:        types.ElysiumSymbol,
+						ExchangeRate: elysiumExchangeRate,
 					},
 				},
 				Voter: valAddr2.String(),

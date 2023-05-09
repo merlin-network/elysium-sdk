@@ -13,7 +13,7 @@ import (
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 	tmtime "github.com/tendermint/tendermint/types/time"
 
-	persistenceapp "github.com/merlin-network/elysium-sdk/v2/simapp"
+	elysiumapp "github.com/merlin-network/elysium-sdk/v2/simapp"
 	"github.com/merlin-network/elysium-sdk/v2/x/oracle/keeper"
 	"github.com/merlin-network/elysium-sdk/v2/x/oracle/testutil"
 	"github.com/merlin-network/elysium-sdk/v2/x/oracle/types"
@@ -26,7 +26,7 @@ type KeeperTestSuite struct {
 	valAddresses []sdk.ValAddress
 
 	ctx         sdk.Context
-	app         *persistenceapp.SimApp
+	app         *elysiumapp.SimApp
 	queryClient types.QueryClient
 	msgServer   types.MsgServer
 }
@@ -60,8 +60,8 @@ func (s *KeeperTestSuite) SetupTest() {
 	s.queryClient = types.NewQueryClient(queryHelper)
 }
 
-func (s *KeeperTestSuite) initAppAndContext() (app *persistenceapp.SimApp, ctx sdk.Context) {
-	app = persistenceapp.Setup(s.T(), false)
+func (s *KeeperTestSuite) initAppAndContext() (app *elysiumapp.SimApp, ctx sdk.Context) {
+	app = elysiumapp.Setup(s.T(), false)
 	ctx = app.BaseApp.NewContext(false, tmproto.Header{
 		Height: initialHeight,
 		Time:   tmtime.Now(),
@@ -158,7 +158,7 @@ func (s *KeeperTestSuite) TestAggregateExchangeRateVote() {
 
 	var tuples types.ExchangeRateTuples
 	tuples = append(tuples, types.ExchangeRateTuple{
-		Denom:        types.PersistenceDenom,
+		Denom:        types.ElysiumDenom,
 		ExchangeRate: sdk.ZeroDec(),
 	})
 
@@ -187,8 +187,8 @@ func (s *KeeperTestSuite) TestAggregateExchangeRateVoteError() {
 
 func (s *KeeperTestSuite) TestSetExchangeRateWithEvent() {
 	app, ctx := s.app, s.ctx
-	app.OracleKeeper.SetExchangeRateWithEvent(ctx, types.PersistenceDenom, sdk.OneDec())
-	rate, err := app.OracleKeeper.GetExchangeRate(ctx, types.PersistenceDenom)
+	app.OracleKeeper.SetExchangeRateWithEvent(ctx, types.ElysiumDenom, sdk.OneDec())
+	rate, err := app.OracleKeeper.GetExchangeRate(ctx, types.ElysiumDenom)
 	s.Require().NoError(err)
 	s.Require().Equal(rate, sdk.OneDec())
 }
@@ -203,20 +203,20 @@ func (s *KeeperTestSuite) TestGetExchangeRate_UnknownDenom() {
 func (s *KeeperTestSuite) TestGetExchangeRate_NotSet() {
 	app, ctx := s.app, s.ctx
 
-	_, err := app.OracleKeeper.GetExchangeRate(ctx, types.PersistenceDenom)
+	_, err := app.OracleKeeper.GetExchangeRate(ctx, types.ElysiumDenom)
 	s.Require().Error(err)
 }
 
 func (s *KeeperTestSuite) TestGetExchangeRate_Valid() {
 	app, ctx := s.app, s.ctx
 
-	app.OracleKeeper.SetExchangeRate(ctx, types.PersistenceDenom, sdk.OneDec())
-	rate, err := app.OracleKeeper.GetExchangeRate(ctx, types.PersistenceDenom)
+	app.OracleKeeper.SetExchangeRate(ctx, types.ElysiumDenom, sdk.OneDec())
+	rate, err := app.OracleKeeper.GetExchangeRate(ctx, types.ElysiumDenom)
 	s.Require().NoError(err)
 	s.Require().Equal(rate, sdk.OneDec())
 
-	app.OracleKeeper.SetExchangeRate(ctx, strings.ToLower(types.PersistenceDenom), sdk.OneDec())
-	rate, err = app.OracleKeeper.GetExchangeRate(ctx, types.PersistenceDenom)
+	app.OracleKeeper.SetExchangeRate(ctx, strings.ToLower(types.ElysiumDenom), sdk.OneDec())
+	rate, err = app.OracleKeeper.GetExchangeRate(ctx, types.ElysiumDenom)
 	s.Require().NoError(err)
 	s.Require().Equal(rate, sdk.OneDec())
 }
@@ -224,9 +224,9 @@ func (s *KeeperTestSuite) TestGetExchangeRate_Valid() {
 func (s *KeeperTestSuite) TestClearExchangeRate() {
 	app, ctx := s.app, s.ctx
 
-	app.OracleKeeper.SetExchangeRate(ctx, types.PersistenceDenom, sdk.OneDec())
+	app.OracleKeeper.SetExchangeRate(ctx, types.ElysiumDenom, sdk.OneDec())
 	app.OracleKeeper.ClearExchangeRates(ctx)
-	_, err := app.OracleKeeper.GetExchangeRate(ctx, types.PersistenceDenom)
+	_, err := app.OracleKeeper.GetExchangeRate(ctx, types.ElysiumDenom)
 	s.Require().Error(err)
 }
 
@@ -235,7 +235,7 @@ func (s *KeeperTestSuite) balanceSetup() {
 	addr := s.accAddresses[0]
 
 	// Prepare account balance
-	givingAmt := sdk.NewCoins(sdk.NewInt64Coin(types.PersistenceDenom, testBalance))
+	givingAmt := sdk.NewCoins(sdk.NewInt64Coin(types.ElysiumDenom, testBalance))
 	err := app.BankKeeper.MintCoins(ctx, minttypes.ModuleName, givingAmt)
 	s.Require().NoError(err)
 
@@ -249,13 +249,13 @@ func (s *KeeperTestSuite) TestFundRewardPool() {
 	addr := s.accAddresses[0]
 
 	// Fund reward pool form account
-	coins := sdk.NewCoins(sdk.NewInt64Coin(types.PersistenceDenom, rewardPoolAmount))
+	coins := sdk.NewCoins(sdk.NewInt64Coin(types.ElysiumDenom, rewardPoolAmount))
 	err := app.OracleKeeper.FundRewardPool(ctx, addr, coins)
 	s.Require().NoError(err)
 
 	moduleAddr := app.AccountKeeper.GetModuleAddress(types.ModuleName)
 	balance := app.BankKeeper.GetAllBalances(ctx, moduleAddr)
-	denomAmount := balance.AmountOf(types.PersistenceDenom)
+	denomAmount := balance.AmountOf(types.ElysiumDenom)
 	s.Require().Equal(denomAmount.Int64(), rewardPoolAmount)
 }
 
@@ -265,13 +265,13 @@ func (s *KeeperTestSuite) TestGetRewardPoolBalance() {
 	addr := s.accAddresses[0]
 
 	// Fund reward pool form account
-	coins := sdk.NewCoins(sdk.NewInt64Coin(types.PersistenceDenom, rewardPoolAmount))
+	coins := sdk.NewCoins(sdk.NewInt64Coin(types.ElysiumDenom, rewardPoolAmount))
 	err := app.OracleKeeper.FundRewardPool(ctx, addr, coins)
 	s.Require().NoError(err)
 
 	moduleAddr := app.AccountKeeper.GetModuleAddress(types.ModuleName)
 	balance := app.OracleKeeper.GetRewardPoolBalance(ctx, moduleAddr)
-	denomAmount := balance.AmountOf(types.PersistenceDenom)
+	denomAmount := balance.AmountOf(types.ElysiumDenom)
 	s.Require().Equal(denomAmount.Int64(), rewardPoolAmount)
 }
 

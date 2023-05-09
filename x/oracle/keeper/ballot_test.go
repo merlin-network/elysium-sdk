@@ -8,7 +8,7 @@ import (
 
 func (s *KeeperTestSuite) TestBallot_OrganizeBallotByDenom() {
 	valAddr := s.valAddresses[0]
-	s.app.OracleKeeper.SetExchangeRate(s.ctx, types.PersistenceDenom, sdk.OneDec())
+	s.app.OracleKeeper.SetExchangeRate(s.ctx, types.ElysiumDenom, sdk.OneDec())
 
 	// Empty Map
 	claimMap := make(map[string]types.Claim)

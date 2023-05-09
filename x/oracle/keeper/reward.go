@@ -10,12 +10,12 @@ import (
 
 // prependFURYIfUnique pushs `ufury` denom to the front of the list, if it is not yet included.
 func prependFURYIfUnique(voteTargets []string) []string {
-	if contains(types.PersistenceDenom, voteTargets) {
+	if contains(types.ElysiumDenom, voteTargets) {
 		return voteTargets
 	}
 
 	rewardDenoms := make([]string, len(voteTargets)+1)
-	rewardDenoms[0] = types.PersistenceDenom
+	rewardDenoms[0] = types.ElysiumDenom
 	copy(rewardDenoms[1:], voteTargets)
 
 	return rewardDenoms

@@ -1,8 +1,8 @@
 syntax = "proto3";
-package persistence.oracle.v1beta1;
+package elysium.oracle.v1beta1;
 
 import "gogoproto/gogo.proto";
-import "persistence/oracle/v1beta1/oracle.proto";
+import "elysium/oracle/v1beta1/oracle.proto";
 import "cosmos_proto/cosmos.proto";
 
 option go_package = "github.com/merlin-network/elysium-sdk/v2/x/oracle/types";

@@ -60,13 +60,13 @@ func (s *QueryTestSuite) TestQueriesNeverAlterState() {
 	}{
 		{
 			"Query current epoch",
-			"/persistence.epochs.v1beta1.Query/CurrentEpoch",
+			"/elysium.epochs.v1beta1.Query/CurrentEpoch",
 			&types.QueryCurrentEpochRequest{Identifier: "weekly"},
 			&types.QueryCurrentEpochResponse{},
 		},
 		{
 			"Query epochs info",
-			"/persistence.epochs.v1beta1.Query/EpochInfos",
+			"/elysium.epochs.v1beta1.Query/EpochInfos",
 			&types.QueryEpochsInfoRequest{},
 			&types.QueryEpochsInfoResponse{},
 		},

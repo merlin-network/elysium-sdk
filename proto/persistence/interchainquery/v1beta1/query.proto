@@ -1,9 +1,9 @@
 syntax = "proto3";
-package persistence.interchainquery.v1beta1;
+package elysium.interchainquery.v1beta1;
 
 import "gogoproto/gogo.proto";
 import "google/api/annotations.proto";
-import "persistence/interchainquery/v1beta1/genesis.proto";
+import "elysium/interchainquery/v1beta1/genesis.proto";
 import "cosmos/base/query/v1beta1/pagination.proto";
 import "cosmos/base/abci/v1beta1/abci.proto";
 import "cosmos/tx/v1beta1/tx.proto";
@@ -17,7 +17,7 @@ service QuerySrvr {
   // Params returns the total set of minting parameters.
   rpc Queries(QueryRequestsRequest) returns (QueryRequestsResponse) {
     option (google.api.http).get =
-        "/persistence/interchainquery/v1beta1/queries/{chain_id}";
+        "/elysium/interchainquery/v1beta1/queries/{chain_id}";
   }
 }
 
@@ -30,7 +30,7 @@ message QueryRequestsRequest {
 // QueryParamsResponse is the response type for the Query/Params RPC method.
 message QueryRequestsResponse {
   // params defines the parameters of the module.
-  repeated persistence.interchainquery.v1beta1.Query queries = 1
+  repeated elysium.interchainquery.v1beta1.Query queries = 1
   [(gogoproto.nullable) = false];
   cosmos.base.query.v1beta1.PageResponse pagination = 2;
 }

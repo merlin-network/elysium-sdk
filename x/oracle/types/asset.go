@@ -5,9 +5,9 @@ import (
 )
 
 const (
-	PersistenceDenom    string = "ufury"
-	PersistenceSymbol   string = "FURY"
-	PersistenceExponent        = uint32(6)
+	ElysiumDenom    string = "ufury"
+	ElysiumSymbol   string = "FURY"
+	ElysiumExponent        = uint32(6)
 	BlocksPerMinute            = uint64(10)
 	BlocksPerHour              = BlocksPerMinute * 60
 	BlocksPerDay               = BlocksPerHour * 24
